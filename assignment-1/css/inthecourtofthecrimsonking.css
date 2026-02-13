@@ -99,7 +99,7 @@ p{
     font-family: "Special Elite", serif; 
 }
 
-.containter > section, .container > aside, footer{
+section, aside, footer{
     padding: 1rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
