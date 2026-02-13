@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+html{
+    background: url('../images/King_Crimson_Blur.jpg') center;
+    background-size: cover;
+}
+body{
+    background: rgba(33, 23, 25, 0.9);
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "header section"
+        "footer footer";
+    gap: 1rem;
+}
+
+
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(21, 14, 14, 0.9);
+    border-radius: .5rem;
+    align-self: stretch; 
+    background-size: cover;
+}
+header p{
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    margin: 1rem;
+}
+
+main{
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    background-color: rgba(21, 14, 14, 0.9);
+    border-radius: .5rem;
+    padding-bottom: auto;
+    justify-self: stretch;
+    gap: 0;
+}
+
+section{
+    grid-area: section;
+    width: 100%;
+    padding: 2.2rem;
+    margin: 0;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(21, 14, 14, 0.9);
+    border-radius: .5rem;
+    letter-spacing: .2rem;
+}
+
+h1{
+    font-family: 'Metal Mania', cursive;
+    font-size: 5rem;
+    color: rgb(153, 0, 0);
+    margin: .5em 0 0 0;
+}
+
+h2{
+    font-family: "Cabin Sketch", serif;
+    font-size: 3rem;
+    color: rgb(153, 0, 0);
+    margin: .5em 0 0 0;
+}
+
+img{
+    width: 85%;
+    margin: 1em 0;
+    border: solid .5rem rgb(153, 0, 0);
+    border-radius: 1rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    margin-top: 2.5rem;
+    color: rgb(182, 0, 0);
+    font-family: "Cabin Sketch", serif;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-family: "Special Elite", serif; 
+}
+
+.containter > section, .container > aside, footer{
+    padding: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
