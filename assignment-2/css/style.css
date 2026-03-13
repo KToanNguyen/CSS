@@ -1,0 +1,134 @@
+@charset 'UTF-8';
+
+body{
+    width: 85%;
+    margin: 1em auto;
+    padding: 5em 3em;
+    border: 0.1em rgba(128, 128, 128, 0.5) solid;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "title title"
+        "date date"
+        "aside section1"
+        "aside section2"
+        "aside section3";
+    gap: 2.5em;
+}
+
+header h1 {
+    font-size: 13.5em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    color: rgb(249,95,43);
+    padding: 0;
+    margin: 0;
+    letter-spacing: -0.05em;
+    text-align: center;
+    word-spacing: -0.3em;
+    grid-area: title;
+}
+
+header p{
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0 0 2em 0;
+    text-transform: uppercase;
+    letter-spacing: -0.06em;
+    word-spacing: -0.25em;
+    grid-area: date;
+}
+
+h2{
+    font-size: 3em;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+
+}
+
+section:nth-child(1){
+    border-top: rgb(109, 164, 49) 1em solid;
+    margin-right: 3em;
+    grid-area: section1;
+}
+section:nth-child(2){
+    border-top: rgb(231, 47, 123) 1em solid;
+    margin-right: 3em;
+    grid-area: section2;
+}
+section:nth-child(3){
+    border-top: rgb(7, 172, 186) 1em solid;
+    margin-right: 3em;
+    grid-area: section3;
+}
+
+section:nth-child(1) h3{
+    color: rgb(109, 164, 49);
+    line-height: 1.8em;
+    text-transform: uppercase;
+}
+section:nth-child(2) h3{
+    color: rgb(231, 47, 123);
+    line-height: 1.8em;
+    text-transform: uppercase;
+}
+section:nth-child(3) h3{
+    color: rgb(7, 172, 186);
+    line-height: 1.8em;
+    text-transform: uppercase;
+}
+
+aside:nth-child(4){
+
+}
+
+aside:nth-child(5){
+    border: rgb(249,95,43) 0.1em solid;
+    margin-left: 8em;
+    padding: 1.5em;
+    grid-area: aside;
+
+}
+aside:nth-child(5) li, aside:nth-child(5) p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+aside:nth-child(5) p em{
+    font-size: 1.1em;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+section li{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 2em;
+    
+}
+
+h3, h3 + p {    
+    display: inline;
+    vertical-align: middle;
+}
+
+abbr[title="Temporal-Mandibular Joint"]{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    float: right;
+}
+footer p em{
+    color: rgb(249,95,43);
+}
+
+/* I didn't find the image so I could not design it with CSS  */
