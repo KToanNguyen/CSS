@@ -20,37 +20,48 @@
 			float: left;
 			margin: 10px 50px 30px 0;
 			width: 160px;
+			background-color: rgb(149, 160, 160);
 		}
 		/* STEP 1: Simple box shadow - x-offset y-offset blur-radius color */
 		.shadow {
-			
+			box-shadow: .45rem .45rem .2rem black;
 		}
 		/* STEP 2: Box shadow with negative offsets and blur */
 		.shadow-negative {
-			
+			box-shadow: -.45rem -.45rem .2rem black;
 		}
 		/* STEP 3: Box shadow with offsets, blur, and shadow-spread value as well */
 		.shadow-spread {
-			
+			box-shadow: .45rem .45rem .2rem 1rem black;
 		}
 		/* STEP 4: Box shadow with no offsets, blur and shadow-spread */
 		.shadow-offsets-0 {
-			
+			box-shadow: 0 1rem .2rem -.5rem black;
 		}
 		/* STEP 5: Inset box shadow with keyword 'inset' at the end of the values */
 		.inset-shadow {
-			
+			box-shadow: .45rem .45rem .2rem black inset;
 		}
 		/* STEP 6: Create multiple box shadows with comma-separated lists of values */
 		.multiple {
-			
+			box-shadow: 
+				-.45rem -.45rem .2rem black, 
+				.45rem .45rem .2rem rgb(82, 82, 82),
+				-.45rem .45rem .2rem rgb(50, 50, 50),
+				.45rem -.45rem .2rem rgb(100, 100, 100);
 		}
 		/* STEP 7a: Create a box shadow with a negative spread */
 		.shadow-negative-spread {
-			
+			box-shadow: 0 1rem .1rem -.5rem black;
+			transition: all .25s;
+			position: relative;
+			top: 0;
+			transform: scale(1.1);
 		}
 		/* STEP 7b: Add a :hover pseudo-class to simulate box dropping closer toward page surface - add a transition above to STEP 7a, too */
-		.shadow-negative-spread:hover {
+		.shadow-negative-spread:active {
+			box-shadow: 0 1rem .15rem -.28rem black;
+			transform: scale(1);
 			
 		}
 		/* Learn more about box-shadow at https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
