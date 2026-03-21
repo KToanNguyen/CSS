@@ -1,0 +1,69 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Box-sizing reset (https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/) */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+	font-family: "Open Sans", sans-serif;
+}
+#container {
+	width: 80%;
+	margin: 0 auto;
+}
+div.class{
+	position: relative;
+}
+div ul {
+	padding: 0;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	border-bottom: 0.15rem solid black;
+	list-style: none;
+	margin: 0.1rem;
+	z-index: 3;
+}
+div[role="tabpanel"]{
+	display: none;
+	position: relative;
+	margin: 0.1rem;
+	padding: 1em;
+	line-height: 1.5;
+	border: 0.15rem solid black;
+	position: relative;
+	top: -.25rem;
+	z-index: 2;
+}
+div[role="tabpanel"]:target {
+    display: block;
+}
+a{
+	color: black;
+	margin: 0 .2rem 0 0;
+	padding: .5rem;
+	display: block;
+	text-decoration: none;
+	background-color: lightgrey;
+	border-radius: .7rem .7rem 0 0 ;
+	position: relative;
+	z-index: 3;
+}
+
+a:hover, a:active{
+	position: relative;
+	background-color: white;
+	border: 0.15rem solid black;
+	border-bottom: 0.15rem solid white;
+	top: .15rem;
+	z-index: 5;
+}
+
+
+
+/* Lab 3 code: 920718 */
