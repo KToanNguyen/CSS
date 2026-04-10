@@ -1,0 +1,61 @@
+@charset "UTF-8";
+html{
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(32, 2, 86);
+}
+
+body{
+    justify-self: center;
+    margin: 5% 0 5% 0;
+    padding: 5%;
+    background-color: rgb(230, 232, 239);
+}
+
+header, legend{
+    color: rgb(32, 2, 86);
+}
+
+table{
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+thead th{
+    color: white;
+    background-color: black;
+    font-weight: bold;
+}
+
+th, td{
+    padding: .2rem 1.5em .2rem 1.5em;
+    font-weight: normal;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
+img{
+    width: 2rem;
+    align-items: center;
+    padding: 0.3rem;
+    vertical-align: middle;
+}
+
+#PWHL{
+    text-align: left;
+    width: 40%;
+}
+
+[class = "1"], [class = "3"], [class = "5"], [class = "7"]{
+    background-color: rgb(245, 245, 245);
+}
+
+[class = "2"], [class = "4"], [class = "6"], [class = "8"]{
+    background-color: white;
+}
+
+#PTS{
+    background-color: rgb(152, 152, 152);
+    padding: 0 2rem 0 2rem;
+    color: black;
+    font-weight: bolder;
+}
