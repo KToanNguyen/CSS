@@ -1,27 +1,46 @@
 @charset "UTF-8";
-
-.special-elite-regular {
-  font-family: "Special Elite", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-.cabin-sketch-regular {
-  font-family: "Cabin Sketch", sans-serif;
+/* Add fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.cabin-sketch-bold {
-  font-family: "Cabin Sketch", sans-serif;
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
   font-weight: 700;
   font-style: normal;
 }
-.metal-mania-regular {
-  font-family: "Metal Mania", system-ui;
-  font-weight: 400;
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
   font-style: normal;
 }
 
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 
 html {
 	box-sizing: border-box;
@@ -38,4 +57,12 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+/* Heading design */
+h1{
+    font-family: "Cinzel Decorative", serif;
+    font-size: 10rem;
+    text-align: center;
+    color: rgb(201, 149, 72);
 }
