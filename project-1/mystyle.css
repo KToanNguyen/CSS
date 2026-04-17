@@ -50,19 +50,40 @@ html {
 	box-sizing: inherit;
 }
 
+
 body{
-    /* Wallpaper */
-    background-image: url("img/KC.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  /* Wallpaper */
+  background-image: url("img/KC.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Heading design */
 h1{
-    font-family: "Cinzel Decorative", serif;
-    font-size: 10rem;
-    text-align: center;
-    color: rgb(201, 149, 72);
+  font-family: "Cinzel Decorative", serif;
+  background-color: rgb(122, 25, 32);
+  padding: 0 0.1rem 0 0.1rem;
+  border: 0.1em solid rgb(201, 149, 72);
+  font-size: 10rem;
+  text-align: center;
+  color: rgb(201, 149, 72);
+}
+
+li{
+  list-style: none;
+}
+
+a:not(:has(span, svg)){
+/* An interesting property that can include/exclude a child element */
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 600;
+  background-color: rgb(122, 25, 32);
+  padding: 0 1rem;
+  border: 0.1em solid rgb(201, 149, 72);
+  text-decoration: none;
+  text-align: center;
+  color: rgb(201, 149, 72);
+  list-style: none;
 }
