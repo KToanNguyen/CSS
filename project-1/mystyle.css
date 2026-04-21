@@ -43,7 +43,14 @@
 }
 
 html {
+  /* Wallpaper */
 	box-sizing: border-box;
+  /* background-image: url("img/KC.png"); */
+  size: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 *, *:before, *:after {
@@ -52,16 +59,19 @@ html {
 
 
 body{
-  /* Wallpaper */
-  background-image: url("img/KC.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  height: 90%;
+  width: 85%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* background-color: rgba(50, 0, 4, 0.9); */
+  
 }
 
 /* Heading design */
-h1{
+h1{ 
   font-family: "Cinzel Decorative", serif;
   background-color: rgb(122, 25, 32);
   padding: 0 0.1rem 0 0.1rem;
@@ -71,19 +81,46 @@ h1{
   color: rgb(201, 149, 72);
 }
 
+
+h2{
+  font-family: "Playfair Display", serif;
+  color: rgb(201, 149, 72);
+  text-align: center;
+  letter-spacing: 5%;
+}
+
+h3{
+  
+}
+
+p{
+  font-family: "Open Sans", sans-serif;
+}
+
 li{
   list-style: none;
 }
 
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+path{
+  /* visibility: hidden; */
+  width: 0;
+}
+
 a:not(:has(span, svg)){
 /* An interesting property that can include/exclude a child element */
-  font-family: "Cinzel Decorative", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 600;
-  background-color: rgb(122, 25, 32);
-  padding: 0 1rem;
-  border: 0.1em solid rgb(201, 149, 72);
+  padding: 0 0.1rem;
+  letter-spacing: 5%;
   text-decoration: none;
   text-align: center;
   color: rgb(201, 149, 72);
-  list-style: none;
+  /* background-color: rgb(122, 25, 32);
+  border: 0.1rem solid rgb(201, 149, 72); */
 }
