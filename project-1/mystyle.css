@@ -47,18 +47,47 @@ html {
 body{
   font-family: "Cormorant Garamond", serif;
   height: 90%;
-  width: 85%;
+  width: 95%;
   text-align: justify;
   margin: 0 auto;
   padding: 5%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   background-color: rgba(50, 0, 4, 0.9);
   background-size: 90%;
 }
+/* Another code learned from Gemini, help to recreate a signature move: Time Erasure */
+body:has(.skip-link:active, header a:active, nav a:active)::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Gif file from https://www.wattpad.com/796998945-it-just-works-diavolo-reader-x-rwby-meeting-the/page/2 */
+  background: url("img/time-erase.gif") center center / cover no-repeat; 
+  backdrop-filter: invert(1) hue-rotate(180deg) contrast(2);
+  z-index: 9999;
+  pointer-events: none;
+}
 
-article footer, main, aside, footer{
+body:has(.skip-link:active, header a:active, nav a:active) {
+  animation: jitter 0.1s infinite;
+}
+
+@keyframes jitter {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(5px, -2px); }
+  100% { transform: translate(-5px, 2px); }
+}
+/* End of the code */
+
+header, main, footer, article {
+  flex: 1 1 100%; 
+}
+
+article section, footer, aside, footer{
   background-color: rgba(30, 0, 2, 0.9);
   padding: 1rem;
   margin-top: 3rem;
@@ -116,10 +145,21 @@ li{
   list-style: none;
 }
 
-nav ul{
-  list-style: none;
+nav ul, 
+#contribute #files .container{
   display: flex;
-  justify-content: space-around;
+  justify-content: center; 
+  align-items: center;     
+  flex-wrap: wrap;                       
+}
+
+body aside{
+  flex: 1;
+  justify-content: space-between;
+}
+
+.container h2, .container h4{
+  margin: 1rem;
 }
 
 section ul{
@@ -146,15 +186,14 @@ a:not(:has(svg)){
   text-decoration: none;
   text-align: center;
   color: rgb(223, 184, 96);
-  /* background-color: rgb(148, 1, 5);
-  border: 0.1rem double rgb(223, 184, 96); */
 }
 
+/* This code is learned from Gemini */
+/* Start */
 main a, aside a, footer a, header p a {
   position: relative;
   text-decoration: none;
 }
-
 main a::after, aside a::after, footer a::after, header p a::after {
   content: '';
   position: absolute;
@@ -166,13 +205,41 @@ main a::after, aside a::after, footer a::after, header p a::after {
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   transform: translateX(-50%);
 }
-
 main a:hover::after, aside a:hover::after, footer a:hover::after, header p a:hover::after {
   width: 100%;
 }
+/* End */
 
-nav a{
+nav a,
+#contribute #files .container a,
+.profile .container > a,
+.link-guidelines,
+.link-allstyles{
   background-color: rgb(148, 1, 5);
+  margin: 1rem;
   padding: 0.5rem 2rem;
   border: 0.3rem double rgb(223, 184, 96);
+  transition: all 0.3s ease-in-out; 
+  display: inline-block;
+  justify-content: center;
+  text-decoration: none;
+}
+
+nav a:hover, 
+#contribute #files .container a:hover,
+.profile .container > a:hover,
+.link-guidelines:hover,
+.link-allstyles:hover {
+  text-decoration: none;
+  transform: scale(1.1); 
+  box-shadow: 0 0 15px rgb(223, 184, 96), 0 0 5px rgb(223, 184, 96);
+  border-color: rgb(255, 211, 108);
+}
+
+nav a::after:hover, 
+#contribute #files .container a::after:hover,
+.profile .container > a::after:hover,
+.link-guidelines::after:hover,
+.link-allstyles::after:hover{
+  text-decoration: none;
 }
