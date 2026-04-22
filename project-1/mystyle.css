@@ -243,3 +243,73 @@ nav a::after:hover,
 .link-allstyles::after:hover{
   text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+  
+  body {
+    width: 95%;
+    padding: 2%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+  }
+
+  h2, h3, h4 {
+    font-size: 150%;
+  }
+
+  p, li {
+    font-size: 110%;
+    line-height: 1.6rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  nav a,
+  #contribute #files .container a,
+  .profile .container > a,
+  .link-guidelines,
+  .link-allstyles {
+    margin: 0.5rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  aside {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  body:has(.skip-link:active, header a:active, nav a:active)::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Gif file from https://www.wattpad.com/796998945-it-just-works-diavolo-reader-x-rwby-meeting-the/page/2 */
+    background: url("img/time-erase.gif") center center / cover no-repeat; 
+    backdrop-filter: invert(1) hue-rotate(180deg) contrast(2);
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  body:has(.skip-link:active, header a:active, nav a:active) {
+    animation: jitter 0.1s infinite;
+  }
+
+  @keyframes jitter {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(5px, -2px); }
+    100% { transform: translate(-5px, 2px); }
+  }
+}
