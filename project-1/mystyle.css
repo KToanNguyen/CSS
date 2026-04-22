@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Add fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
 .cinzel-decorative-regular {
   font-family: "Cinzel Decorative", serif;
   font-weight: 400;
@@ -19,33 +20,18 @@
   font-style: normal;
 }
 
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
 
-.playfair-display {
-  font-family: "Playfair Display", serif;
+.cormorant-garamond {
+  font-family: "Cormorant Garamond", serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-}
-
-.open-sans {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
 html {
   /* Wallpaper */
 	box-sizing: border-box;
-  /* background-image: url("img/KC.png"); */
+  background-image: url("img/KC.png");
   size: 100%;
   background-position: center;
   background-size: cover;
@@ -59,42 +45,71 @@ html {
 
 
 body{
+  font-family: "Cormorant Garamond", serif;
   height: 90%;
   width: 85%;
-  text-align: center;
+  text-align: justify;
   margin: 0 auto;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* background-color: rgba(50, 0, 4, 0.9); */
-  
+  background-color: rgba(50, 0, 4, 0.9);
+  background-size: 90%;
+}
+
+article footer, main, aside, footer{
+  background-color: rgba(30, 0, 2, 0.9);
+  padding: 1rem;
+  margin-top: 3rem;
+  line-height: 3rem;
 }
 
 /* Heading design */
+header, nav{
+  text-align: center;
+  background: none;
+}
+
+
+h1, h2, h3, h4{
+  font-family: "Cinzel Decorative", serif;
+}
+
 h1{ 
   font-family: "Cinzel Decorative", serif;
-  background-color: rgb(122, 25, 32);
-  padding: 0 0.1rem 0 0.1rem;
-  border: 0.1em solid rgb(201, 149, 72);
-  font-size: 10rem;
+  color: rgb(223, 184, 96);
+  background-color: rgb(148, 1, 5);
+  border: 0.15em double rgb(223, 184, 96);
+  background-size: contain;
+  background-repeat: round;
+  padding: 0.5rem 0.1rem 0.5rem 0.1rem;
+  margin: 2rem 0;
+  font-size: 8rem;
   text-align: center;
-  color: rgb(201, 149, 72);
 }
 
-
-h2{
+h2, h3, h4{
   font-family: "Playfair Display", serif;
-  color: rgb(201, 149, 72);
-  text-align: center;
+  color: rgb(223, 184, 96);
   letter-spacing: 5%;
+  font-size: 200%;
 }
 
-h3{
-  
+p, li{
+  font-size: 150%;
+  color: white;
 }
 
-p{
-  font-family: "Open Sans", sans-serif;
+strong{
+  font-weight: bolder;
+}
+
+.link-github{
+  display: none;
+  visibility: hidden;
+  border: none;
+  background: none;
 }
 
 li{
@@ -104,15 +119,25 @@ li{
 nav ul{
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-path{
-  /* visibility: hidden; */
-  width: 0;
+section ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+section ul li{
+  font-size: 120%;
+  font-weight: 600;
+  color: rgb(223, 184, 96);
+  background-color: rgb(148, 1, 5);
+  margin: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
+  border: 0.3rem double rgb(223, 184, 96);
 }
 
-a:not(:has(span, svg)){
+a:not(:has(svg)){
 /* An interesting property that can include/exclude a child element */
   font-family: "Playfair Display", serif;
   font-weight: 600;
@@ -120,7 +145,34 @@ a:not(:has(span, svg)){
   letter-spacing: 5%;
   text-decoration: none;
   text-align: center;
-  color: rgb(201, 149, 72);
-  /* background-color: rgb(122, 25, 32);
-  border: 0.1rem solid rgb(201, 149, 72); */
+  color: rgb(223, 184, 96);
+  /* background-color: rgb(148, 1, 5);
+  border: 0.1rem double rgb(223, 184, 96); */
+}
+
+main a, aside a, footer a, header p a {
+  position: relative;
+  text-decoration: none;
+}
+
+main a::after, aside a::after, footer a::after, header p a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+main a:hover::after, aside a:hover::after, footer a:hover::after, header p a:hover::after {
+  width: 100%;
+}
+
+nav a{
+  background-color: rgb(148, 1, 5);
+  padding: 0.5rem 2rem;
+  border: 0.3rem double rgb(223, 184, 96);
 }
